@@ -7,5 +7,6 @@ class Rebuild{
         $this->settings = $settings;
         $this->config = new startup($this->settings);
         $this->chem = new chemistry($this->config);
+	$this->chem->rebuild();
     }
 }
