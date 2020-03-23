@@ -1,0 +1,24 @@
+{
+    "name": "mcshane/chem-core",
+    "description": "No-Brainer core db code repository management utilizing TheDataBaseMachine ORM framework. Template project coming soon.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shane Burns",
+            "email": "mcshaneburns@gmail.com"
+        }
+    ],
+    "require": {
+        "doctrine/dbal" : "*",
+        "doctrine/cache" : "*",
+        "monolog/monolog" : "*",
+        "thecodingmachine/tdbm" :  "^5.1",
+        "tightenco/overload" : "*"
+    },
+    "autoload": {
+        "psr-4": { 
+            "ChemCore\\": "src"
+        }
+    }
+}
