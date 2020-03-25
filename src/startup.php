@@ -22,6 +22,6 @@ class startup
             "ds" => DIRECTORY_SEPARATOR
         );
         
-        $this->settings = array_merge($stdSettings, $settings);
+        $this->settings = array_merge($this->stdSettings, $settings);
     }
 }

@@ -16,8 +16,6 @@ class chemistry
     function __construct(startup $config, bool $loadOnInit = true){
         // Store config locally
         $this->config = $config;
-        $this->tdbmService = $this->startTDBMService();
-        
                 
         $this->DefineConstants($this->config->settings);
 
@@ -80,7 +78,7 @@ class chemistry
         );
 
         // The TDBMService is created using the configuration object.
-        $this->tdbmService = new TDBM\TDBMService($configuration);
+        return new TDBM\TDBMService($configuration);
     }
 
     public function rebuildModel(){
@@ -89,7 +87,7 @@ class chemistry
             return new Result("\n\tAll Daos and Beans generated from " . $_ENV['myDB'] . 
                         " for the '". PROJECT_NAMESPACE ."' namespace. ", 'Succeeded');
         } catch (\Throwable $th) {
-            throw new Result("$th", "Failed");
+            return new Result("$th", "Failed");
         }
     }
     
