@@ -22,7 +22,7 @@ class chemistry
         $this->DefineConstants($this->config->settings);
 
         if(is_null(PROJECT_NAMESPACE) || empty(ENV_DETAILS_PATH) || ENV_DETAILS_PATH == null) {
-            $this->result = new Result('A project namespace or environment details path has not been included in the configuration file. '.
+            $this->result = new Result('A project namespace or environment details path has not been included in the configuration. '.
                 ' Please see the getting started guide to set this up.(TODO: add a link to github when you get the page setup lol)');
             $this->printResult($this->result);
             throw new \Throwable('FATAL CHEMISTRY APPLICATION ERROR :: - \nThe expected PROJECT_NAMESPACE or ENV_DETAILS_PATH were not located in defined constants scope.');
