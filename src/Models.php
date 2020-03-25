@@ -1,7 +1,7 @@
 <?php
 namespace ChemCore;
 
-class Models{
+class models{
     public $tdbmService;
     function __construct($tdbmService){
         if($tdbmService === null) die();

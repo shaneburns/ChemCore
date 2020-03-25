@@ -18,7 +18,8 @@
     },
     "autoload": {
         "psr-4": { 
-            "ChemCore\\": "src"
+            "ChemCore\\": "src",
+            "ChemCore\\Modules\\": "modules"
         }
     }
 }
