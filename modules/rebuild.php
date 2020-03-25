@@ -7,8 +7,8 @@ class Rebuild{
     private $chem;
     public function __construct(array $settings) {
         $this->settings = $settings;
-        $this->config = new startup($this->settings);
-        $this->chem = new chemistry($this->config);
+        $this->config = new ChemCore\startup($this->settings);
+        $this->chem = new ChemCore\chemistry($this->config);
         $this->rebuild();
         exit;
     }
@@ -33,7 +33,7 @@ class Rebuild{
             echo "\nRebuild Status: $result->status 👌 ".
                  $result->body .
                  "\n\tGet at it!";
-        } catch (Result $rseult) {
+        } catch (ChemCore\Result $rseult) {
             echo "\nRebuild Status: $result->status ❌ \n" .
                  $rseult->body.
                  "\n\tSorry bro...";
