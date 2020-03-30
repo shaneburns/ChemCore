@@ -83,7 +83,7 @@ class chemistry
 
     public function rebuildModel(){
         try {
-            $this->tdbmService->regenerateAllDaosAndBeans();
+            $this->tdbmService->generateAllDaosAndBeans();
             return new Result("\n\tAll Daos and Beans generated from " . $_ENV['myDB'] . 
                         " for the '". PROJECT_NAMESPACE ."' namespace. ", 'Succeeded');
         } catch (\Throwable $th) {
