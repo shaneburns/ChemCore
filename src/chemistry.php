@@ -61,7 +61,7 @@ class chemistry
         $beanNamespace = PROJECT_NAMESPACE . '\\Beans';
         $daoNamespace = PROJECT_NAMESPACE . '\\Daos';
 
-        $cache = new Common\Cache\ApcuCache();
+        $cache = new Common\Cache\ArrayCache();
 
         $logger = new Logger('cantina-app'); // $logger must be a PSR-3 compliant logger (optional).
 
